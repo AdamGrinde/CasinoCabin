@@ -8,9 +8,9 @@ def main_menu(wallet):
     print("----[Welcome to the CasinoCabin]----")
     print("----[Select your game]----\n")
 
-    print("[1] Roulette      [4] Blackjack      [7] Deposit money")
-    print("[2] Poker     [5] Horses          [8] Widthdraw money")
-    print("[3] Slots     [6] Blackjack   [9] Exit" + "\n")
+    print("[1] Roulette      [4] Blackjack       [7] Deposit money")
+    print("[2] Poker         [5] Horses          [8] Widthdraw money")
+    print("[3] Slots         [6] Blackjack       [9] Exit" + "\n")
     # errorHandling(wallet)
 
     print("Wallet: $", wallet)
@@ -44,7 +44,7 @@ def main_menu(wallet):
         withdraw_funds(wallet)   
     elif game == 9:
         print("---[Thank you for playing at the CasinoCabin]---")
-        exit
+        exit()
 
 
 # Function to clear console when wanted
