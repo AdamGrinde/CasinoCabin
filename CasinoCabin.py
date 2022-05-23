@@ -292,7 +292,7 @@ def king(wallet):
 # First menu to start main menu
 def first_menu():
 
-    """_This is the first menu that you come to when you start the casino. _
+    """_This is the first menu that you come to when you start. _
     """
 
     clear_console()
