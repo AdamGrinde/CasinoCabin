@@ -60,7 +60,8 @@ Verision 1.2
 
 Verision 1.3
 
-- Skapat spel
+- Skapat spelmeny
+- Skapat Slots maskiner
 
 Verision 1.4
 
