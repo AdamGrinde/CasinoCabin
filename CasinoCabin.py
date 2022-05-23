@@ -2,15 +2,20 @@ import os
 import random
 import time
 
-#Main menu to select game
+
+# Main menu to select game
 def main_menu(wallet):
+
+    """_This is for the main menu where you choose your wanted action._
+    """
+
     clear_console()
     print("----[Welcome to the CasinoCabin]----")
     print("----[Select your game]----\n")
 
-    print("[1] Roulette      [4] Blackjack      [7] Deposit money")
-    print("[2] Poker     [5] Horses          [8] Widthdraw money")
-    print("[3] Slots     [6] Blackjack   [9] Exit" + "\n")
+    print("[1] Roulette  [4] Blackjack      [7] Deposit money")
+    print("[2] Poker     [5] Horses         [8] Widthdraw money")
+    print("[3] Slots     [6] Blackjack      [9] Exit" + "\n")
     # errorHandling(wallet)
 
     print("Wallet: $", wallet)
@@ -48,18 +53,32 @@ def main_menu(wallet):
 
 
 # Function to clear console when wanted
+
 def clear_console():
+
+    """_This function is made to clear the console to make the casino cleaner and more simple to use._
+    """
+
     command = 'clear'
     if os.name in ('nt','dos'):
         command = 'cls'
     os.system(command)
 
-#Shows the current wallet
+# Shows the current wallet
+
 def show_wallet(wallet):
+
+    """_This shows your current wallet, your current assets. _
+    """
+
     print("\nWallet: $", wallet , "\n")
 
-#Checks if the bett is over the wallet amount
+# Checks if the bett is over the wallet amount
+
 def bet_check(wallet, bet):
+
+    """_Checks if you have enough assets to place your wanted bett. _
+    """
 
     if bet == 0:
         main_menu(wallet)
@@ -74,8 +93,12 @@ def bet_check(wallet, bet):
         time.sleep(1.4)
         main_menu(wallet)
 
-#Deposit new funds into wallet
+# Deposit new funds into wallet
+
 def deposit_funds(wallet):
+
+    """_This makes it possible for you to deposit new founds into your wallet. _
+    """
 
     clear_console()
 
@@ -89,8 +112,12 @@ def deposit_funds(wallet):
 
     main_menu(wallet)
 
-#Withdraw funds from wallet
+# Withdraw funds from wallet
+
 def withdraw_funds(wallet):
+
+    """_This makes it possible for you to withdraw founds from your wallet. _
+    """
 
     clear_console()
     print("----[Withdraw Funds]----\n")
@@ -102,9 +129,11 @@ def withdraw_funds(wallet):
     time.sleep(2)
     main_menu(wallet)
 
-#Slot machine selection
+# Slot machine selection
 def slots(wallet):
 
+    """_This is the main menu for the slots. _
+    """
     clear_console()
 
     print("====[Welcome to Slots!]====\n")
@@ -123,8 +152,12 @@ def slots(wallet):
     else:
         main_menu(wallet)
 
-#Royalle slot machine
+# Royalle slot machine
 def royalle(wallet):
+
+    
+    """_This is the royalle slots machine. _
+    """
 
     clear_console()
 
@@ -188,8 +221,12 @@ def royalle(wallet):
 
     return wallet
 
-#King slot machine game
+# King slot machine game
 def king(wallet):
+
+    """_This is the king slots machine. _
+    """
+
     clear_console()
 
     lane1 = ['King','Grapes','Banana','Lemon','Pear','Strawberry']
@@ -252,11 +289,18 @@ def king(wallet):
 
     return wallet
 
-#First menu to start main menu
+# First menu to start main menu
 def first_menu():
+
+    """_This is the first menu that you come to when you start the casino. _
+    """
+
     clear_console()
     print("----[Welcome to the CasinoCabin]----\n")
     wallet = int(input("Please deposit funds: $"))
     main_menu(wallet)
 
 first_menu()
+
+if __name__ == main():
+    main()
